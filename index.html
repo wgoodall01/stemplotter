@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>StemPlotter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    
+<div ng-app="stemPlotter" ng-controller="plotCtrl" class="container-fluid">
+  <h1>StemPlotter</h1>
+  <div class="col-sm-3">
+    <textarea id="input" ng-model="input" ng-change="updatePlot()"></textarea>
+  </div>
+  <div class="col-sm-9">
+    <table class="table">
+      <thead>
+        <td class="col-stem">Stem</td>
+        <td class="col-leaf">Leaf</td>
+      </thead>
+      <tbody>
+        <tr ng-repeat="(stem, leaf) in plot">
+          <td ng-bind="stem" class="stem"></td>
+          <td ng-bind="leaf"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>

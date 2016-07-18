@@ -1,0 +1,13 @@
+.container-fluid(ng-app="stemPlotter" ng-controller="plotCtrl")
+  h1 StemPlotter
+  .col-sm-3
+    textarea#input(ng-model="input" ng-change="updatePlot()")
+  .col-sm-9
+    table.table
+      thead
+        td.col-stem Stem
+        td.col-leaf Leaf
+       tbody
+         tr(ng-repeat="(stem, leaf) in plot")
+           td(ng-bind="stem").stem
+           td(ng-bind="leaf")
